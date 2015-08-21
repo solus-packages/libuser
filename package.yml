@@ -1,0 +1,17 @@
+name       : libuser
+version    : 0.62
+release    : 1
+source     :
+    - https://fedorahosted.org/releases/l/i/libuser/libuser-0.62.tar.xz : a58ff4fabb01a25043b142185a33eeea961109dd60d4b40b6a9df4fa3cace20b
+license    : LGPL-2.0
+summary    : Standardized interface to manipulate system accounts
+description: |
+    The libuser library implements a standardized interface for manipulating and administering user and group accounts. The library uses pluggable back-ends to interface to its data sources.
+builddeps  :
+    - pkgconfig(gobject-2.0)
+setup      : |
+    %configure --disable-static
+build      : |
+    %make
+install    : |
+    %make_install
